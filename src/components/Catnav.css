@@ -1,0 +1,25 @@
+.list-item {
+    position: relative;
+    cursor: pointer;
+}
+
+.list-item:hover {
+    color: yellow;
+}
+
+.list-item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: red;
+    bottom: -5px;
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.list-item:hover::after {
+    width: 100%;
+    left: 0;
+
+}
